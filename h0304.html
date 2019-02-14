@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-size: 10px;
+            background-color: pink;
+        }
+        #box{
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+        }
+        img:nth-child(1){
+            left: 0;
+            bottom: 0;
+        }
+        img:nth-child(2){
+            left: 0;
+            top:0;
+        }
+        img:nth-child(3){
+            right: 0;
+            bottom: 0;
+        }
+        img:nth-child(4){
+            right: 0;
+            top: 0;
+        }
+        img{
+
+            width: 240px;
+            height: 240px;
+            position: absolute;
+        }
+        #beij{
+            position: absolute;
+            bottom: 240px;
+            right: 240px;
+            background:url('b1.jpg') no-repeat ;
+            background-size: 100% 100%;
+        }
+        #t{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0 240px 0 240px;
+            line-height: 240px;
+            text-align: center;
+            height: 240px;
+            font-size: 2rem;
+
+        }
+        #auto{
+            padding: 2rem;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+  <div id="box">
+   <img src="hy.jpg" >
+      <img src="hy2.jpg" >
+      <img src="hy3.jpg">
+      <img src="hy4.jpg">
+      <div id="beij">
+         <div id="auto"></div>
+      </div>
+      <div id="t"></div>
+
+</div>
+  <script src="js/JSON.js"></script>
+  <script>
+      window.onload = function () {
+          var w = $('box').clientWidth - 480;
+          var h = $('box').clientHeight - 480;
+          $('beij').style.width = w + 'px';
+          $('beij').style.height = h + 'px';
+          $('t').style.width = w  + 'px';
+          //想说的话
+          str = "这是一段自动打字的代码真的吗<br>" + "我洗完了";
+          //遍历字符串
+          jj = 0;
+          var thier = null;
+
+          //时间定时器
+          var last = new Date("1999-03-04 00:00:00");
+          var mslast = last.getTime();
+          setInterval(function () {
+              var now = new Date();
+              var msnow = now.getTime();
+              var msall = msnow - mslast;
+              var sall = parseInt(msall / 1000);
+              var d = size(parseInt(sall / 3600 / 24));
+              var h = size(parseInt(sall / 3600 % 24));
+              var m = size(parseInt(sall / 60 % 60));
+              var s = size(parseInt(sall % 60));
+              document.getElementById("t").innerText = "距离那天过去了" + d + "天" + h + "小时" + m + "分钟" + s + "秒钟";
+          }, 1000);
+
+          function size(num) {
+              return num >= 10 ? num : '0' + num;
+
+          }
+          //延迟字出现
+          thier = setInterval(function () {
+              auto();
+              clearInterval(thier)
+          } ,2000)
+      };
+      function auto(){
+          var divTyping = document.getElementById('auto');
+          if (jj <= str.length) {
+              divTyping.innerHTML = str.slice(0, jj++) + '_';
+              setTimeout('auto()', 150);//递归调用
+          }
+      }
+
+  </script>
+</body>
+</html>

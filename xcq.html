@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: none;
+            box-sizing: border-box;
+        }
+        html,body,ul{
+            width: 100%;
+            height: 100%;
+
+        }
+        #p{
+            position: relative;
+
+        }
+        li{
+
+            width: 120px;
+            position: absolute;
+        }
+        li img{
+            width: 100%;
+        }
+        #p li.c{
+            position: absolute;
+            top: 60%!important;
+            left: 60%!important;
+            z-index: 99;
+            transition: all 1s linear;
+            transform: rotate(0deg) scale(5, 5) translate(-25%,-25%) !important;
+        }
+    </style>
+</head>
+<body>
+<ul id="p">
+</ul>
+</body>
+<script>
+    window.onload  = function () {
+        var ul = document.getElementsByTagName('ul')[0];
+        var timer =null;
+        //第一次打开界面
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        for(var i = 0; i < 42 ;i++){
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            var xx = i+1;
+            img.setAttribute('src', 'iyou/s'+ xx + '.jpg');
+            ul.appendChild(li);
+            li.appendChild(img);
+        }
+        var ali = document.getElementsByTagName('li');
+        for(var j=0; j<ali.length;j++){
+            var ls = ali[j];
+            var x =parseInt(Math.random()*( w - 300));
+            var y = parseInt(Math.random()*( h - 450));
+            var r = parseInt(Math.random() * 180);
+            ls.style.left = x + 'px';
+            ls.style.top = y +'px';
+            ls.style.transform = 'rotate('+ r +'deg)';
+            ls.onclick = function () {
+                for(var k = 0; k<ali.length ;k++){
+                    ali[k].className = '';
+                }
+                this.className = 'c';
+            }
+        }
+        window.onresize = function () {
+            //重新获取屏幕高度
+             w = document.documentElement.clientWidth;
+             h = document.documentElement.clientHeight;
+             //清除原有li标签
+            for(var j =0;j < ul.children.length;j++){
+                ul.children[j].remove();
+            }
+            //用定时器来节点 在创建li标签
+            clearInterval(timer);
+            timer = setInterval(function () {
+                for(var i = 0; i < 44 ;i++){
+                    var li = document.createElement('li');
+                    var img = document.createElement('img');
+                    var xx = i+1;
+                    img.setAttribute('src', 'iyou/s'+ xx + '.jpg');
+                    ul.appendChild(li);
+                    li.appendChild(img);
+                }
+                var ali = document.getElementsByTagName('li');
+                for(var j=0; j<ali.length;j++){
+                    var ls = ali[j];
+                    var x =parseInt(Math.random()*( w-120 ));
+                    var y = parseInt(Math.random()*( h-220 ));
+                    var r = parseInt(Math.random() * 180);
+                    ls.style.left = x + 'px';
+                    ls.style.top = y +'px';
+                    ls.style.transform = 'rotate('+ r +'deg)';
+                    ls.onclick = function () {
+                        for(var k = 0; k<ali.length ;k++){
+                            ali[k].className = '';
+                        }
+                        this.className = 'c';
+                    }
+                }
+                clearInterval(timer);
+            },200)
+        }
+
+    }
+</script>
+</html>
