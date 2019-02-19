@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>You wall</title>
     <style>
         *{
             margin: 0;
@@ -16,6 +16,9 @@
             width: 100%;
             height: 100%;
 
+        }
+        body{
+            background-color: pink;
         }
         #p{
             position: relative;
@@ -50,7 +53,7 @@
         //第一次打开界面
         var w = document.documentElement.clientWidth;
         var h = document.documentElement.clientHeight;
-        for(var i = 0; i < 42 ;i++){
+        for(var i = 0; i < 43 ;i++){
             var li = document.createElement('li');
             var img = document.createElement('img');
             var xx = i+1;
@@ -85,7 +88,7 @@
             //用定时器来节点 在创建li标签
             clearInterval(timer);
             timer = setInterval(function () {
-                for(var i = 0; i < 44 ;i++){
+                for(var i = 0; i < 45 ;i++){
                     var li = document.createElement('li');
                     var img = document.createElement('img');
                     var xx = i+1;

@@ -9,6 +9,11 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
+
+}
+body{
+    background:url("背景/b3.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 #t{
     position: absolute;
@@ -34,15 +39,17 @@ canvas {
         position: absolute;
         top:0;
         font-style: italic;
-        font-size: 40px;
+        font-size: 30px;
         width: 80%;
         margin: 0 10% 0 10%;
+        color: red;
+        background: rgba( 255,255,255,.6);
     }
 </style>
 
 </head>
 <body>
-
+<audio src="music/h0813.m4a"  autoplay="autoplay" loop="loop"  ></audio>
 <div  id='auto' ></div>
 <canvas id="pinkboard"></canvas>
 <div id="t"></div>
@@ -50,7 +57,7 @@ canvas {
 <script>
     window.onload = function () {
         //想说的话
-        str = '这是一段自动打字的代码，很有趣，哈哈哈哈哈哈，呵呵呵呵呵';
+        str = '猪年行大运！宝宝！猪年快乐！小笨猪！最近可好呀！超哥可是一直忙着帮你准备生日礼物哦~ 哈哈怎么样感动吗！'+ '<br/>'+'离我们在一起到今天已经x(时间在下面显示我就不打了哈哈)我还是那么爱你,尽管我们发生了很多不愉快不开心的事,很多东西可能都会改变,但是我爱你的心一直没有变,就像下面那个爱心一样一直为你心动着！所以我一直相信我们能变的更好！更开心更幸福的一起走下去！你还记的你以前问我 会不会带你去旅行，我的答案还是一样！我会带你去天涯海角！只有你我';
         //遍历字符串
          jj = 0;
          var thier = null;

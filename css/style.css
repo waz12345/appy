@@ -224,3 +224,213 @@ body {
 .text h1 {
   font-size: 1.4em;
 }
+
+
+/*文字动画*/
+#wz{
+  width: 100%;
+  height: 800px;
+}
+#wz p{
+  line-height: 30px;
+  font-size: 30px;
+  opacity: 1;
+}
+#wz a{
+  color: black;
+  font-size: 30px;
+  animation: jx14 40s linear;
+}
+#wz p:nth-child(1){
+  animation: jx 40s linear;
+  -moz-animation:jx 40s linear ;
+
+}
+@keyframes jx {
+  0%{
+    opacity: 0;
+  }
+  17%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(2){
+  animation: jx2 40s linear;
+}
+@keyframes jx2 {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(3){
+  animation: jx3 40s linear;
+}
+@keyframes jx3 {
+  0% {
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+  }
+  35%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(4){
+  animation: jx4 40s linear;
+}
+@keyframes jx4 {
+  0%{
+    opacity: 0;
+  }
+  35%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(5){
+  animation: jx5 40s linear;
+  -moz-animation:jx5 40s linear ;
+}
+@keyframes  jx5 {
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(6){
+  animation: jx6 40s linear;
+}
+@keyframes  jx6 {
+  0%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(7){
+  animation: jx7 40s linear;
+}
+@keyframes  jx7{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  55%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(8){
+  animation: jx8 40s linear;
+}
+@keyframes  jx8{
+  0%{
+    opacity: 0;
+  }
+  55%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(9){
+  animation: jx9 40s linear;
+}
+@keyframes  jx9{
+  0%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+  65%{
+    opacity: 1;
+  }
+}
+#wz p:nth-child(10){
+  animation: jx10 40s linear;
+}
+@keyframes  jx10{
+  0%{
+    opacity: 0;
+  }
+  65%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 1;
+  }
+}#wz p:nth-child(11){
+   animation: jx11 40s linear;
+ }
+@keyframes  jx11{
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+}#wz p:nth-child(12){
+   animation: jx12 40s linear;
+ }
+@keyframes  jx12{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+}#wz p:nth-child(13){
+   animation: jx13 40s linear;
+ }
+@keyframes  jx13{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
+  }
+  85%{
+    opacity: 1;
+  }
+}
+@keyframes  jx14{
+  0%{
+    opacity: 0;
+  }
+  85%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 1;
+  }
+}
