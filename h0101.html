@@ -40,13 +40,32 @@ canvas {
     border: 1px solid gainsboro;
     border-radius:5px ;
     background-color: black;
+}a{
+     position: absolute;
+     top:60%;
+     right: 5%;
+     opacity: 1;
+     font-size: 3rem;
+     font-style: italic;
+     color: yellowgreen;
+     animation: a 45s linear;
+ }
+@keyframes a {
+    0%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 </style>
 
 </head>
 <body>
 <audio src="music/h0101.mp3"  autoplay="autoplay" loop="loop"  ></audio>
 <div  id='auto' ></div>
+<a href="my-dr.html">---by渣男</a>
 <canvas></canvas>
 <div id="t"></div>
 
@@ -292,7 +311,9 @@ setTimeout(function() {
 <script>
     window.onload = function () {
         //想说的话
-        str = '这是一段自动打字的代码，很有趣，哈哈哈哈哈哈，呵呵呵呵呵';
+        str = '嘿 最近怎么样 是不是少了一个讨厌鬼在你身边是不是开心很多啊哈哈'+ '<br/>'+'其实有说不完的话想和你说 但是时间的关系我就短说了'+'<br/>'+'为什么我们分手了我还会不停来找你呢'
+        +'<br/>'+'那是因为我喜欢你，你问我为什么会喜欢你 难道喜欢一个人有理由吗 我只知道 我愿意为你付出 愿意为你改变 想让我们变得更好知道白头到老'+'<br/>'+'你告诉我 我不是非你不可 我知道你已经对我失望了 我也知道我们的故事不是童话故事 一定要美满'+'<br/>'
+            + '但是我只知道 如果我连我爱的人 我不敢追求错过的话 那我还算什么男人 希望你能理解 别显得尴尬哈 嘻嘻';
         //遍历字符串
         jj = 0;
         var thier = null;
@@ -320,7 +341,7 @@ setTimeout(function() {
         thier = setInterval(function () {
             auto();
             clearInterval(thier)
-        } ,2000)
+        } ,3000)
     };
     function auto(){
         console.log(jj);

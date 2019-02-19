@@ -76,6 +76,7 @@
         #auto{
             padding: 2rem;
             font-size: 3rem;
+            font-style: italic;
         }
         @keyframes hd1 {
             0% {
@@ -277,6 +278,22 @@
                 top: 1440px;
             }
         }
+        #beij a{
+            opacity: 1;
+            font-size: 3rem;
+            font-style: italic;
+            color: black;
+            float: right;
+            animation: a 25s linear;
+        }
+        @keyframes a {
+            0%,90%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -290,6 +307,7 @@
       <img src="hy4.jpg" id="k">
       <div id="beij">
          <div id="auto"></div>
+          <a href="my-dr.html">---by吴启超(你的英语课代表搭档)</a>
       </div>
       <div id="t"></div>
 
@@ -332,7 +350,8 @@
           $('beij').style.height = h + 'px';
           $('t').style.width = w  + 'px';
           //想说的话
-          str = "这是一段自动打字的代码真的吗<br>" + "我洗完了";
+          str = "周艳霞！生日快乐！生日当然边上都是喜欢的东西！边上的小猫你喜欢吗！专门为你准备的呢！我可是知道的哦！你一直想要养一只小猫！<br>" + "不过！在学校可能有很多限制吧哈哈，不过不要着急！现在只是图片 等你以后实习了！我保证！让你有一只比这些图片还可爱的小猫！<br/>"
+          + '生日快乐 小寿星 小猫与你同在';
           //遍历字符串
           jj = 0;
           var thier = null;

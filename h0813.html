@@ -45,13 +45,33 @@ canvas {
         color: red;
         background: rgba( 255,255,255,.6);
     }
+a{
+    position: absolute;
+    top:60%;
+    right: 0;
+    opacity: 1;
+    font-size: 3rem;
+    font-style: italic;
+    color: black;
+    animation: a 40s linear;
+}
+    @keyframes a {
+        0%,90%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
 </style>
 
 </head>
 <body>
 <audio src="music/h0813.m4a"  autoplay="autoplay" loop="loop"  ></audio>
-<div  id='auto' ></div>
+<div  id='auto' >
+</div>
 <canvas id="pinkboard"></canvas>
+<a href="my-dr.html">---by宇宙无敌超级爱你的超哥</a>
 <div id="t"></div>
 
 <script>
