@@ -348,44 +348,46 @@
     $('beij').style.height = h + 'px';
     $('t').style.width = w  + 'px';
     //想说的话
-    str = "周艳霞！生日快乐！生日当然边上都是喜欢的东西！边上的小猫你喜欢吗！专门为你准备的呢！我可是知道的哦！你一直想要养一只小猫！<br>" + "不过！在学校可能有很多限制吧哈哈，不过不要着急！现在只是图片 等你以后实习了！我保证！让你有一只比这些图片还可爱的小猫！<br/>"
-        + '生日快乐 小寿星 小猫与你同在';
-    //遍历字符串
-    jj = 0;
-    var thier = null;
+   window.onload =function () {
+       str = "周艳霞！生日快乐！生日当然边上都是喜欢的东西！边上的小猫你喜欢吗！专门为你准备的呢！我可是知道的哦！你一直想要养一只小猫！<br>" + "不过！在学校可能有很多限制吧哈哈，不过不要着急！现在只是图片 等你以后实习了！我保证！让你有一只比这些图片还可爱的小猫！<br/>"
+           + '生日快乐 小寿星 小猫与你同在';
+       //遍历字符串
+       jj = 0;
+       var thier = null;
 
-    //时间定时器
-    var last = new Date("1999-03-04 00:00:00");
-    var mslast = last.getTime();
-    setInterval(function () {
-        var now = new Date();
-        var msnow = now.getTime();
-        var msall = msnow - mslast;
-        var sall = parseInt(msall / 1000);
-        var d = size(parseInt(sall / 3600 / 24));
-        var h = size(parseInt(sall / 3600 % 24));
-        var m = size(parseInt(sall / 60 % 60));
-        var s = size(parseInt(sall % 60));
-        document.getElementById("t").innerText = "距离那天过去了" + d + "天" + h + "小时" + m + "分钟" + s + "秒钟";
-    }, 1000);
+       //时间定时器
+       var last = new Date("1999-03-04 00:00:00");
+       var mslast = last.getTime();
+       setInterval(function () {
+           var now = new Date();
+           var msnow = now.getTime();
+           var msall = msnow - mslast;
+           var sall = parseInt(msall / 1000);
+           var d = size(parseInt(sall / 3600 / 24));
+           var h = size(parseInt(sall / 3600 % 24));
+           var m = size(parseInt(sall / 60 % 60));
+           var s = size(parseInt(sall % 60));
+           document.getElementById("t").innerText = "距离那天过去了" + d + "天" + h + "小时" + m + "分钟" + s + "秒钟";
+       }, 1000);
 
-    function size(num) {
-        return num >= 10 ? num : '0' + num;
+       function size(num) {
+           return num >= 10 ? num : '0' + num;
 
-    }
-    //延迟字出现
-    thier = setInterval(function () {
-        auto();
-        clearInterval(thier)
-    } ,2000);
+       }
+       //延迟字出现
+       thier = setInterval(function () {
+           auto();
+           clearInterval(thier)
+       } ,2000);
 
-    function auto(){
-        var divTyping = document.getElementById('auto');
-        if (jj <= str.length) {
-            divTyping.innerHTML = str.slice(0, jj++) + '_';
-            setTimeout('auto()', 150);//递归调用
-        }
-    }
+       function auto(){
+           var divTyping = document.getElementById('auto');
+           if (jj <= str.length) {
+               divTyping.innerHTML = str.slice(0, jj++) + '_';
+               setTimeout('auto()', 150);//递归调用
+           }
+       }
+   }
     // timer3 = setInterval(function () {
     //            timer4 =  setInterval(function () {
     //                var imgx = document.getElementsByTagName('img')[t-1];
