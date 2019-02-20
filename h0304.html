@@ -314,7 +314,7 @@
 </div>
   <script src="js/JSON.js"></script>
   <script>
-      window.onload = function () {
+
           var timer3 =null,timer4 = null;
           var w = $('box').clientWidth - 480;
           var h = $('box').clientHeight - 480;
@@ -379,8 +379,8 @@
           thier = setInterval(function () {
               auto();
               clearInterval(thier)
-          } ,2000)
-      };
+          } ,2000);
+
       function auto(){
           var divTyping = document.getElementById('auto');
           if (jj <= str.length) {

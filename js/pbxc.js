@@ -1,4 +1,4 @@
-window.onload = function () {
+
     pubu("big","box");
     var span = document.getElementsByTagName('span')[0];
     var x,beginner,end = 0, timer = null, timer1 = null;
@@ -96,8 +96,8 @@ window.onload = function () {
                 clearInterval(timer1);
             },200)
 
-    }
-};
+    };
+
 
 /**
  * 瀑布流的实现
