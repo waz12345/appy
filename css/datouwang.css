@@ -639,8 +639,6 @@ body {
   }
   .bottom p{
   position: absolute;
-    left: 10%;
-    width: 80%;
     font-size: 40px;
     font-style: italic;
     opacity: 0;
