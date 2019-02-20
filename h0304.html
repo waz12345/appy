@@ -314,7 +314,6 @@
 </div>
 <script src="js/JSON.js"></script>
 <script>
-   window.onload = function () {
        var timer3 =null,timer4 = null;
        var w = client().width - 480;
        var h = client().height - 480;
@@ -388,7 +387,7 @@
                divTyping.innerHTML = str.slice(0, jj++) + '_';
                setTimeout('auto()', 150);//递归调用
            }
-       }
+
    }
     // timer3 = setInterval(function () {
     //            timer4 =  setInterval(function () {
