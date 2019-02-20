@@ -298,7 +298,41 @@
 </head>
 <body>
 <audio src="music/h0304..m4a"  autoplay="autoplay" loop="loop"  ></audio>
+<script>
+    var timer3 =null,timer4 = null;
+    var w = $('box').clientWidth - 480;
+    var h = $('box').clientHeight - 480;
+    var z =parseInt(h / 240);
+    var zy = h  - z * 240;
+    zy = zy / z;
+    var t = 0;
+    var end,be = 0;
+    $('top-c').style.width = w + 'px';
+    for(var p = 0;p < z ;p++){
+        (function () {
+            var img = document.createElement("img");
+            img.src = p+1 +".jpg";
+            img.style.animation = "hd"+ (p+1)+" 30s linear";
+            img.style.top = (zy+240) * (p+1)  + 'px';
+            $('box').insertBefore(img,document.getElementsByTagName('img')[0]);
+        })(p)
+    }
 
+    pp = p;
+    for( p=p+1;p < (z*2+1);p++)
+    {
+        var img1 = document.createElement("img");
+        img1.src = p +".jpg";
+        $('box').insertBefore(img1,document.getElementsByTagName('img')[0]);
+        img1.style.top = (zy+240) * (p-pp) + 'px';
+        img1.style.animation = "yb"+ (p-pp)+" 30s linear";
+        img1.style.right = 0;
+    }
+
+    $('beij').style.width = w + 'px';
+    $('beij').style.height = h + 'px';
+    $('t').style.width = w  + 'px';
+</script>
   <div id="box">
       <div id="top-c"></div>
    <img src="hy.jpg" id="l" >
